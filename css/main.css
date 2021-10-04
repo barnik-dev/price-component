@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6f6fe;
+  text-align: center;
+}
+
+p {
+  font-size: 0.93rem;
+}
+
+.top-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  z-index: -1;
+}
+
+.top .head {
+  color: #6d708d;
+  font-size: 1.8rem;
+}
+
+.top .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.6em;
+  margin: 1em 0;
+}
+
+.top .toggle p {
+  color: #b3b5c6;
+  font-size: 0.8rem;
+}
+
+.top .toggle .toggle-bar {
+  position: relative;
+  width: 3rem;
+  height: 1.6rem;
+  border-radius: 3.125rem;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+}
+
+.top .toggle .toggle-bar::after {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 3.125rem;
+  background-color: #f6f6fe;
+  top: 0.2em;
+  left: 0.2em;
+  -webkit-transition: -webkit-transform 400ms ease;
+  transition: -webkit-transform 400ms ease;
+  transition: transform 400ms ease;
+  transition: transform 400ms ease, -webkit-transform 400ms ease;
+}
+
+.top .toggle .toggle-bar:hover {
+  cursor: pointer;
+}
+
+.card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  margin-top: 3em;
+  padding-bottom: 2em;
+}
+
+.card-container .card {
+  padding: 2em;
+  width: 22rem;
+  -webkit-box-shadow: 0.125rem 0.125rem 0.875rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.125rem 0.125rem 0.875rem rgba(0, 0, 0, 0.1);
+}
+
+.card-container .card .card-head .type {
+  color: #6d708d;
+}
+
+.card-container .card .card-head .price {
+  color: #494c5f;
+  font-size: 4rem;
+  margin: 0.3em 0;
+}
+
+.card-container .card .card-body .feature {
+  color: #6d708d;
+  padding: 1em 0;
+  position: relative;
+}
+
+.card-container .card .card-body .feature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.0625rem;
+  width: 100%;
+  background-color: #b3b5c6;
+  opacity: 0.4;
+}
+
+.card-container .card .card-footer {
+  padding: 2em 0 0;
+  position: relative;
+}
+
+.card-container .card .card-footer button {
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: white;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  padding: 1.2em 0;
+  -webkit-box-shadow: 0.0625rem 0.0625rem 2.875rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.0625rem 0.0625rem 2.875rem rgba(0, 0, 0, 0.2);
+}
+
+.card-container .card .card-footer button:hover {
+  cursor: pointer;
+  color: #696fdd;
+  background: transparent;
+  border: 1px solid #696fdd;
+  margin: -1px;
+}
+
+.card-container .card .card-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.0625rem;
+  width: 100%;
+  background-color: #b3b5c6;
+  opacity: 0.4;
+}
+
+.card-container .card-1,
+.card-container .card-3 {
+  background-color: white;
+}
+
+.card-container .card-1 {
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.card-container .card-3 {
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-container .card-2 {
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  padding: 3.5em 2em;
+  border-radius: 0.5rem;
+}
+
+.card-container .card-2 .type,
+.card-container .card-2 .price {
+  color: white !important;
+}
+
+.card-container .card-2 .card-body .feature {
+  color: white !important;
+}
+
+.card-container .card-2 .card-footer button {
+  display: block;
+  background: white;
+  color: #696fdd;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  padding: 1.2em 0;
+  -webkit-box-shadow: 0.0625rem 0.0625rem 2.875rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.0625rem 0.0625rem 2.875rem rgba(0, 0, 0, 0.2);
+}
+
+.card-container .card-2 .card-footer button:hover {
+  cursor: pointer;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  margin: -1px;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3.2em;
+}
+
+@media only screen and (max-width: 500px) {
+  .top-bg {
+    width: 50%;
+  }
+  .card-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  .card {
+    width: 20rem !important;
+  }
+}
+
+.bottom-bg {
+  position: absolute;
+  bottom: -3em;
+  left: 0;
+  width: 22%;
+  z-index: -1;
+}
+
+.inactive::after {
+  -webkit-transform: translateX(1.38em);
+          transform: translateX(1.38em);
+}
+
+.active::after {
+  -webkit-transform: translateX(0.1em);
+          transform: translateX(0.1em);
+}
+/*# sourceMappingURL=main.css.map */

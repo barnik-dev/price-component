@@ -1,0 +1,49 @@
+@mixin displayFlex($content, $item, $gap) {
+  display: flex;
+  justify-content: $content;
+  align-items: $item;
+  gap: $gap;
+}
+
+@mixin displayGrid($content, $item, $column, $gap) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  justify-content: $content;
+  align-items: $item;
+  gap: $gap;
+}
+
+@mixin btn($bg-color, $color, $hover-color, $hover-bg-color) {
+  display: block;
+  background: $bg-color;
+  color: $color;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  padding: 1.2em 0;
+  box-shadow: 0.0625rem 0.0625rem 2.875rem rgba(black, 0.2);
+
+  &:hover {
+    cursor: pointer;
+    color: $hover-color;
+    background: $hover-bg-color;
+    border: 1px solid $hover-color;
+    margin: -1px;
+  }
+}
+
+@mixin customBorder {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.0625rem;
+  width: 100%;
+  background-color: $light-grayish-blue;
+  opacity: 0.4;
+}
